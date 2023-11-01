@@ -1,0 +1,14 @@
+<h1>List of Cars</h1>
+
+<app-car *ngFor="let car of carList" [car]="car" (carSelected)="onCarSelected($event)"></app-car>
+
+<div *ngIf="selectedCar">
+  <h2>Selected Car</h2>
+  <ul>
+    <li>Car Model: {{ selectedCar.carModel }}</li>
+    <li>Company: {{ selectedCar.company }}</li>
+    <li>Make Year: {{ selectedCar.makeYear }}</li>
+    <li>Vehicle Class: {{ selectedCar.vehicleClass }}</li>
+    <li>Body Style: {{ selectedCar.bodyStyle }}</li>
+  </ul>
+</div>
